@@ -37,7 +37,6 @@ const AddUser = () => {
     const addUserDetails = async () => {
       await addUser(user);
       alert("Data Berhasil Disimpan")
-            navigate('/all')
       navigate('/all');
     }
 

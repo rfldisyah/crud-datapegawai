@@ -25,7 +25,7 @@ export const getUser = async (data) => {
         console.log('Error Pemanggilan api', error.message);
     }
 }
-
+ 
 export const editUser = async (data, id) => {
     try{
         return await axios.put(`${API_URL}/${id}`, data);
