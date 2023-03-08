@@ -5,16 +5,18 @@ import { useNavigate, useParams } from "react-router-dom";
 
 
 
-
-
 const Container = styled(FormGroup)`
     width: 20%;
     margin: 5% auto 0 auto;
     & > div {
-        margin-top: 5px;
+        margin-top: 6px;
     }
 `
 
+const StyledTypography = styled(Typography)`
+    text-align: center;
+
+`
 
 const initialValues = {
   nama: '',
@@ -55,7 +57,7 @@ const EditUser = () => {
 
   return (
     <Container>
-        <Typography variant="h4"> Edit User</Typography>
+        <StyledTypography variant="h4"> EDIT USER</StyledTypography> <hr />
       <FormControl>
         <TextField onChange={(e) => onValueChange(e)} name='nama' id="outlined-basic" label="Nama" variant="outlined" value={user.nama}/>
       </FormControl>
@@ -114,7 +116,7 @@ const EditUser = () => {
         </TextField>
       </FormControl>
       <FormControl>
-        <Button onClick={() => addUserDetails()} variant="contained"  style={{ borderRadius: 15, width: 400 }}>Edit User</Button>
+        <Button onClick={() => addUserDetails()} variant="contained"  style={{ borderRadius: 15, width: 400 }}>Update</Button>
       </FormControl>
     </Container>
   );

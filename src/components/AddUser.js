@@ -10,8 +10,12 @@ const Container = styled(FormGroup)`
     width: 20%;
     margin: 5% auto 0 auto;
     & > div {
-        margin-top: 5px;
+        margin-top: 6px;
     }
+`
+
+const StyledTypography = styled(Typography)`
+    text-align: center;
 `
 
 
@@ -42,7 +46,7 @@ const AddUser = () => {
 
   return (
     <Container>
-        <Typography variant="h4"> Add User</Typography>
+        <StyledTypography variant="h4" > ADD USER</StyledTypography> <hr/>
       <FormControl>
         <TextField onChange={(e) => onValueChange(e)} name='nama' id="outlined-basic" label="Nama" variant="outlined" />
       </FormControl>
@@ -98,7 +102,7 @@ const AddUser = () => {
         </TextField>
       </FormControl>
       <FormControl>
-        <Button onClick={() => addUserDetails()} variant="contained"  style={{ borderRadius: 15, width: 400 }}>Add User</Button>
+        <Button onClick={() => addUserDetails()} variant="contained"  style={{ borderRadius: 15, width: 400 }}>Simpan</Button>
       </FormControl>
     </Container>
   );
